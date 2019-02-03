@@ -52,6 +52,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jacoco.reportPath>${project.basedir}/../target/jacoco-aggregate.exec</jacoco.reportPath>
 	</properties>
 
 	<profiles>
@@ -157,6 +158,10 @@
 							<goal>prepare-agent</goal>
 							<goal>prepare-agent-integration</goal>
 						</goals>
+						<configuration>
+							<append>true</append>
+							<destFile>${jacoco.reportPath}</destFile>
+						</configuration>
 					</execution>
 					<execution>
 						<id>report</id>
