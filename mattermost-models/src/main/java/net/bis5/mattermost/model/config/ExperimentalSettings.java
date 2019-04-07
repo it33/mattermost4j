@@ -29,6 +29,8 @@ public class ExperimentalSettings {
   private String clientSideCertCheck;
   /* @since Mattermost Server 5.6 */
   private boolean enablePostMetadata;
+  /* @since Mattermost Server 5.10 */
+  private boolean restrictSystemAdmin;
 
   /**
    * Set the enable post metadata.
